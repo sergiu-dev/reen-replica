@@ -1,0 +1,622 @@
+/* Global Styles */
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+p {
+    color: #506a85;
+}
+
+h1, h4, h5 {
+    color: #506a85;
+    font-weight: bold;
+}
+
+
+.btn {
+    color: #fff;
+    font-family: 'Source Sans Pro',sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    border-radius: 2px;
+    background: #1abb9c;
+    box-shadow: inset 0 -2px 0 rgba(0,0,0,0.15);
+}
+
+/* --Top-- */
+
+.h_top {
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: #f5f7fa;
+    font-size: 0.8rem;
+    color: #506a85;
+    border-bottom: 1px solid #e6e9ed;
+}
+
+/* adding a 15px padding to the left and right to account for the "before" items added */
+/* so that using the "container" class everything would be perfectly aligned in the center */
+/* otherwise there would've been a discrepancy between the top section and the next sections */
+.h_top .row {
+    padding: 0 15px;
+}
+/* selecting each p tag in order to add an image with before */
+
+    .h_top p:nth-of-type(1)::before {
+        content: url(../img/icon-mail-1.png);
+        margin-right: 5px;
+    }
+
+    .h_top p:nth-of-type(2)::before {
+        content: url(../img/icon-mobile.png);
+        margin-right: 5px;
+    }
+
+/* adding a margin-top so we can easily get that nice vertically centered effect */
+.h_top p {
+    display: inline;
+}
+
+.h_top p:hover {
+    color: #3dcbb3;
+}
+
+.h_top ul {
+    padding-inline-start: 0;
+    /* getting rid of the auto-applied bottom margin */
+    margin: 0;
+    /* centering our social icons horizontally */
+    text-align: center;
+}
+
+/* adding some distance between the 2 paragraphs */
+.h_top p:nth-of-type(1) {
+    margin-right: 25px;
+}
+
+/* adding padding to get the same vertically centered effect */
+/* and full height so it will cover the entire block when we hover over it */
+
+.h_top i {
+    padding: 1rem 0;
+    height: 100%;
+    width: 35px;
+}
+
+/* line-height adjusted to "unset" for a better center alignment */
+.social_i .fa, .social_i .fab, .social_i .fal, .social_i .far, .social_i .fas {
+    line-height: unset!important;
+}
+
+/* Hover effect for each social icon */
+
+.h_top i:hover {
+    color: #fff;
+}
+
+.h_top i:nth-of-type(1):hover {
+    background-color: #4668b3;
+    transition: all 200ms ease-out;
+}
+
+.h_top i:nth-of-type(2):hover {
+    background-color: #de5745;
+    transition: all 200ms ease-out;
+}
+
+.h_top i:nth-of-type(3):hover {
+    background-color: #2fbbed;
+    transition: all 200ms ease-out;
+}
+
+.h_top i:nth-of-type(4):hover {
+    background-color: #d94348;
+    transition: all 200ms ease-in-out;
+}
+
+.h_top i:nth-of-type(5):hover {
+    background-color: #3079ff;
+    transition: all 200ms ease-out;
+}
+
+.h_top i:nth-of-type(6):hover {
+    background-color: #eb6397;
+    transition: all 200ms ease-out;
+}
+
+/* -- Navigation -- */
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    box-shadow: 0px 9px 9px -6px rgba(67,77,89,1);
+}
+
+.navbar {
+    background-color: #fff!important;
+}
+
+#s_header {
+    width: 100%;
+    background-color: #fff;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    padding: 8px 15px;
+    color: #506a85;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 0.8rem;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.navbar-nav .nav-item.active .nav-link,
+.navbar-nav .nav-item:hover .nav-link {
+    color: #00bc9c;
+}
+
+/* Dropdown menu styling */
+  
+/* The container <div> - needed to position the dropdown content */
+#drop_home {
+    position: relative;
+    border-radius: 2px;
+}
+
+#drop_home:hover {
+    border: 1px solid #e6e9ed;
+}
+  
+/* Dropdown Content (Hidden by Default) */
+
+.drop_h_cnt {
+    display: none;
+    position: absolute;
+    background-color: #f5f7fa;
+    min-width: 150px;
+    border-radius: 2px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.drop_h_cnt ul {
+    list-style: none;
+    padding: 0;
+    border: 1px solid #e6e9ed;
+}
+  
+/* Links inside the dropdown */
+.drop_h_cnt a {
+    text-decoration: none;
+    display: block;
+    background-color: #f5f7fa;
+    border-bottom: 1px solid #e6e9ed;
+    padding: 8px 15px;
+    color: #506a85;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 0.8rem;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* Change color of dropdown links on hover */
+.drop_h_cnt a:hover {
+    background-color: #00bc9c;
+    color: #fff;
+}
+  
+/* Show the dropdown menu on hover */
+#drop_home:hover .drop_h_cnt {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+#drop_home:hover .drop_btn {
+    background-color: #f5f7fa;
+    border-radius: 2px;
+}
+
+/* MEGA menu drop */
+
+#drop_mega {
+    position: relative;
+}
+
+#drop_mega:hover {
+    border: 1px solid #e6e9ed;
+}
+
+#drop_mega:hover .drop_btn {
+    background-color: #f5f7fa;
+    border-radius: 2px;
+}
+
+.drop_m_cnt {
+    display: none;
+    background-color: #f5f7fa;
+    border: 1px solid #e6e9ed;
+    position: absolute;
+    left: -700px;
+    background-color: #f5f7fa;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.mega_box {
+    width: 250px;
+    margin: 10px 20px;
+}
+  
+#drop_mega:hover .drop_m_cnt {
+    display: block;
+}
+  
+#drop_home:hover .drop_btn {
+    background-color: #f5f7fa;
+    border-radius: 2px;
+}
+
+.drop_m_cnt h5 {
+    padding: 10px 20px;
+    text-transform: uppercase;
+}
+
+.mega_box img {
+    margin-bottom: 10px;
+}
+
+.mega_imgs img{
+    margin-bottom: 5px;
+}
+
+.drop_m_cnt p {
+    line-height: 1.4em;
+}
+
+.mega_box ul li {
+    color: #506a85;
+}
+
+.mega_box ul li:hover {
+color: #00bc9c;
+}
+/* Search box drop */
+
+#drop_search .drop_btn {
+    color: #506a85;
+    padding: 5px 20px;
+}
+
+#drop_search .drop_btn:hover {
+    color: #00bc9c;
+}
+
+.drop_s_cnt {
+    display: none;
+    position: absolute;
+    background-color: #f5f7fa;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.drop_s_cnt form {
+    position: relative;
+    margin: 10px;
+}
+
+.drop_s_cnt form button {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+#drop_search:hover .drop_s_cnt {
+    display: block;
+}
+
+/* --Welcome section-- */
+
+#welcome {
+    background-image: url(../img/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#welcome h1 {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 50px;
+    padding-top: 200px;
+    font-weight: bold;
+    font-family: 'Source Sans Pro', sans-serif;
+    letter-spacing: 1px;
+}
+
+#welcome p {
+    color: #a3b1bf;
+}
+
+#welcome button {
+    margin-bottom: 200px;
+    margin-top: 20px;
+    padding: 10px 40px;
+    font-size: 0.8rem;
+}
+
+/* Attributes section */
+
+#attributes {
+    padding-bottom: 100px;
+}
+
+.h_txt h1 {
+    font-size: 30px;
+    padding-top: 100px;
+    margin-bottom: 20px;
+}
+
+#attributes i {
+    color: #00bc9c;
+    font-size: 50px;
+    padding-right: 20px;
+}
+
+.attr_box p:nth-of-type(1){
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Works section */
+
+#works {
+    background-color: #f2f5f7;
+    padding-bottom: 100px;
+}
+
+.w_box {
+    width: 40%;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+    padding: 0;
+}
+
+.w_box h5:hover {
+    color: #00bc9c;
+}
+
+.w_box img {
+    width: 100%;
+}
+
+.w_txt {
+    padding: 10px 0;
+    border-left: 1px solid #e6e9ed;
+    border-right: 1px solid #e6e9ed;
+    border-bottom: 1px solid #e6e9ed;
+}
+
+.w_txt p {
+    margin: 0;
+}
+
+.w_img {
+    margin-top: 70px
+}
+
+.w_img img {
+    width: 100%;
+}
+
+/* Contact section */
+
+#contact button {
+    margin-bottom: 100px;
+    margin-top: 20px;
+    padding: 10px 15px;
+    font-size: 0.7rem;
+}
+
+.container > .f_box {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+/* Footer */
+
+footer {
+    background-color: #2f4052;
+}
+
+footer p {
+    color: #9caab9;
+    font-size: 0.8rem;
+}
+
+.f_box {
+    margin: 0 5px;
+}
+
+.f_box h5 {
+    color: #fff;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.f_logo {
+    padding-bottom: 20px;
+}
+
+.f_box a {
+    font-weight: bold;
+    color: #9caab9;
+    text-decoration: none;
+}
+
+.f_box a:hover {
+    color: #00bc9c;
+}
+
+.f_box a::after {
+    content: '\279C';
+    margin-left: 7px;
+    transition: all 200ms ease-out;
+}
+
+.f_box a:hover::after {
+    margin-left: 20px;
+}
+
+footer .d-flex.flex-wrap img {
+    margin: 3px;
+}
+
+.f_box div p {
+    margin: 0;
+    height: 20px;
+    font-size: 0.8rem;
+}
+
+.f_box div p:nth-of-type(1)::before{
+    content: url(../img/icon-location.png);
+    font-size: 15pt;
+    margin-right: 10px;
+}
+
+.f_box div p:nth-of-type(2)::before{
+    content: url(../img/icon-mobile.png);
+    font-size: 15pt;
+    margin-right: 10px;
+}
+
+.f_box div p:nth-of-type(3)::before{
+    content: url(../img/icon-mail-1.png);
+    font-size: 15pt;
+    margin-right: 10px;
+}
+
+.f_box div p:hover {
+    color: #00bc9c;
+}
+
+.f_box form input {
+    width: 220px;
+    position: relative;
+    background-color: #4e5c6b;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 5px;
+}
+
+.f_box form {
+    position: relative;
+}
+
+.f_box form button {
+    padding: 5px 7px;
+    font-size: 0.7rem;
+    position: absolute;
+    top: 8px;
+    left: 140px;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #fff;
+    font-size: 0.8rem;
+    opacity: 1; /* Firefox */
+}  
+
+.bottom {
+    background-color: #283645;
+}
+
+.bottom ul {
+    list-style: none;
+}
+
+.bottom ul li::before{
+    content:"•"; 
+    font-size: 7pt; 
+    margin-right: 3px;
+    color: #9caab9;
+}
+
+.bottom ul li:hover::before{
+    color: #00bc9c;
+}
+
+.bottom ul li:first-of-type::before {
+    content: "";
+}
+
+.bottom ul li {
+    display: inline-block;
+    padding: 0 5px;
+    margin-top: 1rem;
+}
+
+.bottom ul li a {
+    color: #707e8c;
+    font-size: 0.8rem;
+    text-decoration: none;
+}
+
+.bottom ul li a:hover {
+    color: #00bc9c;
+}
+
+.bottom p {
+    margin-top: 1rem;
+    color: #707e8c;
+}
+
+#top_btn {
+    border: none;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: #506a85; 
+    color: #00bc9c;
+    padding: 5px 10px;
+    border-radius: 2px; 
+  }
+
+/* Media queries */
+
+
+@media only screen and (max-width: 768px) {
+    .w_img {
+        display: none;
+    }
+
+    .w_txt h5 {
+        padding: 0 10px;
+    }
+
+    .container > .f_box {
+        padding: 10px 15px;
+    }
+
+    .f_box h5 {
+        padding-top: 20px;
+    }
+        
+    .bottom ul {
+        margin-bottom: 0;
+        padding-left: 0;
+        padding-bottom: 20px;
+    }
+
+    .bottom p {
+        margin: 0;
+        padding-top: 20px;
+    }
+    
+}
